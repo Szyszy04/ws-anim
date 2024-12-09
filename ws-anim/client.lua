@@ -15,7 +15,7 @@ RegisterCommand('anim', function(source, args)
     end
 
     -- Play the animation
-    TaskPlayAnim(playerPed, animDict, animName, 8.0, 8.0, -1, 49, 0, false, false, false)
+    TaskPlayAnim(playerPed, animDict, animName, 8.0, 8.0, -1, 1, 0, false, false, false)
 
     print('Animation started: ' .. animDict .. ' ' .. animName)
 
@@ -25,7 +25,6 @@ RegisterCommand('anim', function(source, args)
             Citizen.Wait(0)
             if IsControlJustPressed(0, 177) then 
                 ClearPedTasks(playerPed)
-                print('Animation stopped.')
                 break
             end
         end
